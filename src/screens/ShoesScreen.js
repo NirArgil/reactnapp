@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react'
-import { TouchableOpacity } from 'react-native';
+import React, { useState } from 'react'
 import { StyleSheet, View, FlatList, Image, Button, TextInput, ActivityIndicator } from 'react-native';
 import { Input, Text } from 'react-native-elements';
-import Spacer from '../components/Spacer';
-import { addToCart } from '../components/actions/cartActions';
 import ShoesItem from '../components/ShoesItem';
 
-const ShoesScreen = ({ navigation, items, search }) => {
+const ShoesScreen = ({ navigation, items }) => {
     const [isLoading, setLoading] = useState(true);
     const [searchTerm, setSearchTerm] = useState('');
 

@@ -1,16 +1,11 @@
 import {
-    ADD_TO_CART,
-    REMOVE_ITEM,
-    SUB_QUANTITY,
-    ADD_QUANTITY,
-    ADD_SHIPPING, GET_ITEMS
+   GET_ITEMS
 } from '../actions/actionsTypes/cartTypes'
 
 
 const initialState = {
     items: [],
-    loading: false,
-
+    loading: false
 }
 
 export default function (state = initialState, action) {

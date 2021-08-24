@@ -4,7 +4,7 @@ import { StyleSheet, View, FlatList, Image, Button, TextInput, ActivityIndicator
 import { Input, Text } from 'react-native-elements';
 import Spacer from '../components/Spacer';
 import { addToCart } from '../components/actions/cartActions';
-import ShirtsItem from '../components/shirtsItem';
+import ShirtsItem from '../components/ShirtsItem';
 
 const ShirtsScreen = ({ navigation, items }) => {
     const [isLoading, setLoading] = useState(true);

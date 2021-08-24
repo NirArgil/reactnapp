@@ -1,9 +1,13 @@
-import React, { useEffect, useState } from 'react'
-import { StyleSheet, View, FlatList, Image } from 'react-native';
+import React from 'react'
+import { StyleSheet, View } from 'react-native';
 import { Text, Button } from 'react-native-elements';
+import { connect } from 'react-redux';
 import Spacer from '../components/Spacer';
+import {addToCart} from '../components/actions/cartActions';
 
-const HomeScreen = ({ navigation, shoesSelected, pantsSelected, shirtsSelected, items }) => {
+const HomeScreen = ({ navigation, shoesSelected, pantsSelected, shirtsSelected, cartItems}) => {
+
+    console.log(cartItems);
 
     return (
         <View style={styles.container}>
@@ -11,8 +15,8 @@ const HomeScreen = ({ navigation, shoesSelected, pantsSelected, shirtsSelected, 
 
             <Text style={styles.sets}>Completed Sets:</Text>
 
-            <Text>Selected Items: {items}</Text>
-            <Text>Shoes: {shoesSelected}</Text>
+            <Text>Selected Items:</Text>
+            <Text>Shoes:</Text>
             <Text>Pants:</Text>
             <Text>Shirts:</Text>
 
@@ -44,4 +48,8 @@ const styles = StyleSheet.create({
    
 });
   
-export default HomeScreen;
+const mapStateToProps = (state) => ({
+    cartItems: state.cartItems,
+});
+
+export default connect(mapStateToProps, { addToCart })(HomeScreen);

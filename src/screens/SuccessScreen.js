@@ -1,14 +1,11 @@
 import React from 'react'
 import { StyleSheet, View, FlatList, Image, Button, TextInput, ActivityIndicator } from 'react-native';
 import { Input, Text } from 'react-native-elements';
-import Item from '../components/Item';
 
 const SuccessScreen = ({ navigation, items }) => {
-    const [isLoading, setLoading] = useState(true);
 
     const shoes = items.items.results.filter(item => item.type === 'shoes');
 
-    // console.log(shoes.sizes);
 
     return (
         <View style={styles.container}>

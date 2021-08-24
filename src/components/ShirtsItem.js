@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { TouchableOpacity } from 'react-native';
 import { StyleSheet, View, FlatList, Image, Alert  } from 'react-native';
 import { Text, Button } from 'react-native-elements';
-import AlertButton from './AlertButton';
 
 const ShirtsItem = ({ item, navigation }) => {
     const [shirtsSizesState, setShirtsSizes] = useState(false);

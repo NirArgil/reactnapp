@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { StyleSheet, View, FlatList, Image, Button, TextInput, ActivityIndicator } from 'react-native';
 import { Text } from 'react-native-elements';
-import PantsItem from '../components/pantsItem';
+import PantsItem from '../components/PantsItem';
 
 const PantsScreen = ({ navigation, items }) => {
     const [isLoading, setLoading] = useState(true);
     const [pantsData, setPantsData] = useState([]);
 
     const pants = items.items.results.filter(item => item.type === 'pants');
-
 
         return (
             <View style={styles.container}>

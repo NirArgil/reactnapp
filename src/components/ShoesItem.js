@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { TouchableOpacity } from 'react-native';
 import { StyleSheet, View, FlatList, Image, Alert  } from 'react-native';
 import { Text, Button } from 'react-native-elements';
-import AlertButton from './AlertButton';
+import { addToCart } from './actions/cartActions';
 
 const ShoesItem = ({ item, navigation }) => {
     const [shoesSizesState, setShoesSizes] = useState(false);
@@ -94,6 +94,7 @@ const ShoesItem = ({ item, navigation }) => {
                                                 },
                                                 {
                                                     text: "OK", 
+                                                    onPress: () => addToCart(item, data),
                                                     onPress: () => navigation.navigate("Home")
                                                 }
                                             ]
