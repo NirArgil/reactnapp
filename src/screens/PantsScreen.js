@@ -9,45 +9,45 @@ const PantsScreen = ({ navigation, items }) => {
 
     const pants = items.items.results.filter(item => item.type === 'pants');
 
-        return (
-            <View style={styles.container}>
-    
-                <Text h3 style={styles.head}>{pants.length} Available Pants</Text>
-                {/* <Input type="text" placeholder="Search" onChange={event => {setSearchTerm(event.target.value)}}/> */}
-                <FlatList
-                    data={pants.sort((a, b) => a.name.localeCompare(b.name))}
-                    keyExtractor={(item, index) => item._id}
-                    renderItem={({ item }) => (
-                        <>
-                        
-                        <PantsItem item={item} navigation={navigation} /> 
-                        
-                        </>
+    return (
+        <View style={styles.container}>
+
+            <Text h3 style={styles.head}>{pants.length} Available Pants</Text>
+
+            <FlatList
+                data={pants.sort((a, b) => a.name.localeCompare(b.name))}
+                keyExtractor={(item, index) => item._id}
+                renderItem={({ item }) => (
+                    <>
+
+                        <PantsItem item={item} navigation={navigation} />
+
+                    </>
                 )} />
-                
-    
-            </View>
-        )
+
+
+        </View>
+    )
+}
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        marginBottom: 70,
+        width: "100%"
+    },
+    head: {
+        alignSelf: 'center',
+    },
+    shoeDetails: {
+        width: 160,
+        height: 140,
+    },
+    txt: {
+        fontSize: 25,
+        width: "100%",
     }
-    
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            alignItems: 'center',
-            marginBottom: 70,
-            width: "100%"
-        },
-        head: {
-            alignSelf: 'center',
-        },
-        shoeDetails: {
-            width: 160,
-            height: 140,
-        },
-        txt: {
-            fontSize: 25,
-            width: "100%",
-        }
-    });
+});
 
 export default PantsScreen;

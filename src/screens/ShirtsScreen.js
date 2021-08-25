@@ -7,29 +7,26 @@ import { addToCart } from '../components/actions/cartActions';
 import ShirtsItem from '../components/ShirtsItem';
 
 const ShirtsScreen = ({ navigation, items }) => {
-    const [isLoading, setLoading] = useState(true);
-    const [searchTerm, setSearchTerm] = useState('');
 
     const shirts = items.items.results.filter(item => item.type === 'shirt');
 
-    // console.log(shoes.sizes);
 
     return (
         <View style={styles.container}>
 
             <Text h3 style={styles.head}>{shirts.length} Available Shirts</Text>
-            {/* <Input type="text" placeholder="Search" onChange={event => {setSearchTerm(event.target.value)}}/> */}
+
             <FlatList
                 data={shirts.sort((a, b) => a.name.localeCompare(b.name))}
                 keyExtractor={(item, index) => item._id}
                 renderItem={({ item }) => (
                     <>
-                    
-                    <ShirtsItem item={item} navigation={navigation} /> 
-                    
+
+                        <ShirtsItem item={item} navigation={navigation} />
+
                     </>
-            )} />
-            
+                )} />
+
 
         </View>
     )

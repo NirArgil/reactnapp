@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TouchableOpacity } from 'react-native';
-import { StyleSheet, View, FlatList, Image, Alert  } from 'react-native';
+import { StyleSheet, View, FlatList, Image, Alert } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 
 const PantsItem = ({ item, navigation }) => {
@@ -90,25 +90,18 @@ const PantsItem = ({ item, navigation }) => {
                                                     style: "cancel"
                                                 },
                                                 {
-                                                    text: "OK", 
+                                                    text: "OK",
                                                     onPress: () => addToCart(item, data),
                                                     onPress: () => navigation.navigate("Home")
                                                 }
                                             ]
                                         )}>
                                     </Button>)}
-
                             </View> : null}
-
                     </View>
-
                     Brand: {item.brand} </Text>
             </View>
-
         </>
-
-
-
     )
 }
 

@@ -28,51 +28,50 @@ const Application = ({ fetchItems, items }) => {
     return (
         <NavigationContainer>
             <Drawer.Navigator initialRouteName="Home">
-                <Drawer.Screen 
-                        name="Home" 
-                        options={{
+                <Drawer.Screen
+                    name="Home"
+                    options={{
                         headerTitleAlign: 'center',
                     }}>
 
-                {props => <HomeScreen {...props} items={items} />}
+                    {props => <HomeScreen {...props} items={items} />}
 
                 </Drawer.Screen>
 
 
-                <Drawer.Screen 
-                        name="Shoes" 
-                        options={{
+                <Drawer.Screen
+                    name="Shoes"
+                    options={{
                         headerTitleAlign: 'center',
                         drawerIcon: () => <MaterialCommunityIcons name="shoe-formal" size={30} color="black" />,
                     }}>
 
-                {props => <ShoesScreen {...props} items={items} />}
+                    {props => <ShoesScreen {...props} items={items} />}
 
                 </Drawer.Screen>
-        
 
-                <Drawer.Screen 
-                        name="Pants" 
-                        options={{
+
+                <Drawer.Screen
+                    name="Pants"
+                    options={{
                         headerTitleAlign: 'center',
                         drawerIcon: () => <MaterialCommunityIcons name="human-child" size={30} color="black" />,
                     }}>
 
-                {props => <PantsScreen {...props} items={items} />}
+                    {props => <PantsScreen {...props} items={items} />}
 
                 </Drawer.Screen>
 
-                <Drawer.Screen 
-                        name="Shirts" 
-                        options={{
+                <Drawer.Screen
+                    name="Shirts"
+                    options={{
                         headerTitleAlign: 'center',
                         drawerIcon: () => <FontAwesome5 name="tshirt" size={21} color="black" />,
                     }}>
 
-                {props => <ShirtsScreen {...props} items={items} />}
+                    {props => <ShirtsScreen {...props} items={items} />}
 
                 </Drawer.Screen>
-
             </Drawer.Navigator>
         </NavigationContainer>
     )

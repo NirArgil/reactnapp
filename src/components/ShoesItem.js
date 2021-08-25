@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TouchableOpacity } from 'react-native';
-import { StyleSheet, View, FlatList, Image, Alert  } from 'react-native';
+import { StyleSheet, View, FlatList, Image, Alert } from 'react-native';
 import { Text, Button } from 'react-native-elements';
 import { connect } from 'react-redux';
 import { addToCart } from './actions/cartActions';
@@ -92,9 +92,9 @@ const ShoesItem = ({ item, navigation, cartItems }) => {
                                                     style: "cancel"
                                                 },
                                                 {
-                                                    text: "OK", 
+                                                    text: "OK",
                                                     onPress: () => addToCart(item, data),
-                                                    onPress: () => navigation.navigate("Home")
+                                                    onPress: () => navigation.navigate("Home",)
                                                 }
                                             ]
                                         )}>

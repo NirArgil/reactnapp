@@ -11,28 +11,28 @@ const SuccessScreen = ({ navigation, items }) => {
         <View style={styles.container}>
             <Text>You are Successfully chose at least one item of each category.</Text>
 
-                <Text>Shoes:</Text>
-                <Text>Shoes Name:</Text>
-                <Text>Shoes Color:</Text>
-                <Text>Shoes Size:</Text>
-                <Text>Shoes Brand:</Text>
+            <Text>Shoes:</Text>
+            <Text>Shoes Name:</Text>
+            <Text>Shoes Color:</Text>
+            <Text>Shoes Size:</Text>
+            <Text>Shoes Brand:</Text>
 
-                <Text>Pants:</Text>
-                <Text>Pants Name:</Text>
-                <Text>Pants Color:</Text>
-                <Text>Pants Size:</Text>
-                <Text>Pants Brand:</Text>
+            <Text>Pants:</Text>
+            <Text>Pants Name:</Text>
+            <Text>Pants Color:</Text>
+            <Text>Pants Size:</Text>
+            <Text>Pants Brand:</Text>
 
-                <Text>Shirts:</Text>
-                <Text>Shirts Name:</Text>
-                <Text>Shirts Color:</Text>
-                <Text>Shirts Size:</Text>
-                <Text>Shirts Brand:</Text>
+            <Text>Shirts:</Text>
+            <Text>Shirts Name:</Text>
+            <Text>Shirts Color:</Text>
+            <Text>Shirts Size:</Text>
+            <Text>Shirts Brand:</Text>
 
-                <Text>Time of current session in Sec:</Text>
-                <Text>Sum of shoe size and pants size:</Text>
+            <Text>Time of current session in Sec:</Text>
+            <Text>Sum of shoe size and pants size:</Text>
 
-                <Button title="Choose another Set." onPress={() => navigation.navigate('Home')}></Button>
+            <Button title="Choose another Set." onPress={() => navigation.navigate('Home')}></Button>
         </View>
     )
 }

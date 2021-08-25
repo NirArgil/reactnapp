@@ -4,8 +4,6 @@ import { Input, Text } from 'react-native-elements';
 import ShoesItem from '../components/ShoesItem';
 
 const ShoesScreen = ({ navigation, items }) => {
-    const [isLoading, setLoading] = useState(true);
-    const [searchTerm, setSearchTerm] = useState('');
 
     const shoes = items.items.results.filter(item => item.type === 'shoes');
 
@@ -16,7 +14,6 @@ const ShoesScreen = ({ navigation, items }) => {
 
             <Text h3 style={styles.head}>{shoes.length} Available Shoes</Text>
 
-            {/* <Input type="text" placeholder="Search" onChange={event => {setSearchTerm(event.target.value)}}/> */}
             <FlatList
                 data={shoes.sort((a, b) => a.name.localeCompare(b.name))}
                 keyExtractor={(item, index) => item._id}
@@ -27,7 +24,6 @@ const ShoesScreen = ({ navigation, items }) => {
 
                     </>
                 )} />
-
 
         </View>
     )
