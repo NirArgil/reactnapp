@@ -1,7 +1,7 @@
 import { ADD_TO_CART } from "../actions/actionsTypes/cartTypes";
 
 const initialState = {
-    cartItems: [],
+    cartItems: []
 }
   
 export default function (state = initialState, action) {

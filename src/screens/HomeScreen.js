@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Spacer from '../components/Spacer';
 import {addToCart} from '../components/actions/cartActions';
 
-const HomeScreen = ({ navigation, shoesSelected, pantsSelected, shirtsSelected, cartItems}) => {
+const HomeScreen = ({ navigation, shoesSelected, pantsSelected, shirtsSelected, cartItems }) => {
 
     console.log(cartItems);
 

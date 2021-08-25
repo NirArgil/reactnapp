@@ -2,12 +2,11 @@ import React, { useState } from 'react'
 import { TouchableOpacity } from 'react-native';
 import { StyleSheet, View, FlatList, Image, Alert  } from 'react-native';
 import { Text, Button } from 'react-native-elements';
+import { connect } from 'react-redux';
 import { addToCart } from './actions/cartActions';
 
-const ShoesItem = ({ item, navigation }) => {
+const ShoesItem = ({ item, navigation, cartItems }) => {
     const [shoesSizesState, setShoesSizes] = useState(false);
-    const [data, setData] = useState({ size: '', color: '' });
-    const [shoeState, setShoeState] = useState('');
 
     return (
         <>
@@ -132,4 +131,8 @@ const styles = StyleSheet.create({
     }
 });
 
-export default ShoesItem;
+const mapStateToProps = (state) => ({
+    cartItems: state.cartItems,
+});
+
+export default connect(mapStateToProps, { addToCart })(ShoesItem);

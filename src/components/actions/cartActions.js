@@ -16,6 +16,7 @@ export const fetchItems = () => async (dispatch) => {
 
 
 export const addToCart = (item, data) => (dispatch) => {
+    console.log('test');
     dispatch({type: ADD_TO_CART, payload: item, data})	
 }
 

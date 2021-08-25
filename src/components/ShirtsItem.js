@@ -5,9 +5,7 @@ import { Text, Button } from 'react-native-elements';
 
 const ShirtsItem = ({ item, navigation }) => {
     const [shirtsSizesState, setShirtsSizes] = useState(false);
-    const [data, setData] = useState({ size: '', color: '' });
-    const [shoeState, setShoeState] = useState('');
-
+    
     return (
         <>
             <View style={styles.shoeDetails}>
@@ -93,6 +91,7 @@ const ShirtsItem = ({ item, navigation }) => {
                                                 },
                                                 {
                                                     text: "OK", 
+                                                    onPress: () => addToCart(item, data),
                                                     onPress: () => navigation.navigate("Home")
                                                 }
                                             ]
